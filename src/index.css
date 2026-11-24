@@ -1,0 +1,57 @@
+@import "tailwindcss";
+
+@theme {
+  --font-display: "Playfair Display", Georgia, "Times New Roman", serif;
+  --font-body: "Source Serif 4", Georgia, "Times New Roman", serif;
+  --font-ui: "Public Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+
+  --color-newsprint: #FAF9F6;
+  --color-surface: #F2EFE9;
+  --color-ink: #1A1A1A;
+  --color-muted: #555555;
+  --color-rule: #D6D2C4;
+  --color-crimson: #8B1E1E;
+}
+
+@layer base {
+  html {
+    background-color: var(--color-newsprint);
+    color: var(--color-ink);
+    font-family: var(--font-body);
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    font-family: var(--font-display);
+    text-wrap: balance;
+  }
+
+  button:not(:disabled) {
+    cursor: pointer;
+  }
+}
+
+.editorial-dropcap::first-letter {
+  font-family: var(--font-display);
+  float: left;
+  font-size: 4.25rem;
+  line-height: 0.82;
+  font-weight: 700;
+  padding-top: 0.2rem;
+  padding-right: 0.6rem;
+  padding-bottom: 0.1rem;
+  color: var(--color-ink);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

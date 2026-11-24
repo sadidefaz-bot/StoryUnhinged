@@ -1,0 +1,6 @@
+{
+  "name": "The Daily Unhinged",
+  "description": "All the News That's Barely Plausible — a satirical print-style broadsheet newspaper.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
